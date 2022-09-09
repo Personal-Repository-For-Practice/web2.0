@@ -267,6 +267,15 @@ a{
     margin-bottom: auto;
 }
 
+.Landing-Page-Scroll-Tet-Wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 15vh;
+    padding: 1rem;
+}
+
 .about-me-subtitle{
     display: flex;
     justify-content: center;
@@ -353,4 +362,16 @@ a{
     height: 50%;
     padding: 1rem;
     background-color: #115179;
+}
+
+ul{
+    list-style: none;
+    text-align: left;
+    margin-left: -2rem;
+}
+
+.navigation-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
 }
