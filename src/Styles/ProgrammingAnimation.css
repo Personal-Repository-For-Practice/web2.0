@@ -1,0 +1,15 @@
+#InteractButton{
+    animation: represent 3s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes represent{
+    0%{
+        font-size: 3rem;
+    }
+
+    100%{
+        font-size: 1rem;
+    }
+}

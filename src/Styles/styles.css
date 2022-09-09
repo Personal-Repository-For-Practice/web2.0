@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position: fixed;
+    gap: 1rem;
+    padding: 1rem;
+    transition: 0.5s;  
+    z-index: 99;
+    width: 100vw;
+    left: 0px;
+    top: 0px;
+    color: #686868;
+}
+
+.nav:hover {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position: fixed;
+    gap: 1rem;
+    padding: 1rem;
+    transition: 0.5s;  
+    z-index: 99;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    color: #686868;
+}
+
+.nav-content{
+    opacity: 0;
+}
+
+.nav:hover .nav-content{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.nav ul {
+    padding: 1rem;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+.nav li.active {
+    color: #115179;
+    font-weight: 600;
+}
+
+.nav li:hover {
+    color: #457eac;
+}
+
+.siteTitleWrapper{
+    width: auto;
+    margin-left: 1rem;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.site-title{
+    font-size: 2rem;
+}
+
+#welcomeTitle{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+
+    fill: transparent;
+
+    animation: draw 3s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes draw{
+    to{
+        stroke-dashoffset: 0;
+        fill: black;
+    }
+}
+
+.footer{
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 1rem;
+   background-color: #686868;
+   color: white;
+   text-align: center;
+}
+
+.footer-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.section{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.section-item{
+    height: 100vh;
+    padding: 1rem;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: auto;
+}
+
+.subtitle {
+    border-right: solid 3px rgba(0,255,0,.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Source Code Pro', monospace;  
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Animation */
+  .subtitle {
+    animation: animated-text 4s steps(29,end) 1s 1 normal both,
+               animated-cursor 600ms steps(29,end) infinite;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+  }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: rgba(255, 0, 0, 0.75);}
+    to{border-right-color: transparent;}
+  }
+
+  .triangle-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    gap: 1rem;
+    background: linear-gradient(to right bottom, #686868 50%, #ffffff 50%);
+    overflow: none;
+  }
+
+  .triangle{
+    width: 100vw;
+    height: 100vh;
+    margin-left: 5rem;
+    margin-top: 5rem;
+  }
+
+.navigation-section{
+    height: 40vh;
+    width: 40vw;
+    border-radius: 10PX;
+    box-shadow: -20px -20px 50px rgba(255, 255, 255, 0.199);
+    background: linear-gradient(to right bottom, #ffffff 50%, #478ab6 50%);
+
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.navigation-section::-webkit-scrollbar{
+    display: none;
+}
+
+.littlespace{
+    padding-top: 1rem;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    font-size: 5rem;
+    font-weight: 600;
+    color: rgb(41, 41, 41);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+}
+
+.about-me-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 15vh;
+    padding: 1rem;
+    margin-bottom: auto;
+}
+
+.about-me-subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 80vw;
+    height: 15vh;
+    padding: 1rem;
+}
+
+.Header{
+    font-size: 3rem;
+    color: black;
+}
+
+.SubHeader{
+    font-size: 2rem;
+    color: black;
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#aboutmeTitle{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+
+    fill: transparent;
+
+    animation: draw 3s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#projectsTitle{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+
+    fill: transparent;
+
+    animation: draw 3s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.skills-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 10vw;
+    gap: 5rem;
+}
+
+.skill-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 100vh;
+    padding: 1rem;
+}
+
+#skillsTitle{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+
+    fill: transparent;
+
+    animation: draw 3s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.skill-grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    padding: 1rem;
+    background-color: #115179;
+}
