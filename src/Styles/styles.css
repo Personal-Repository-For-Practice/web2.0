@@ -397,3 +397,48 @@ a{
     justify-content: center;
     align-items: center;
 }
+
+.education-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 10vw;
+    gap: 5rem;
+}
+
+#educationTitle{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+
+    fill: transparent;
+
+    animation: draw 3s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.education-section{
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    background-color: #555;
+}
+
+.education-section::-webkit-scrollbar{
+    display: none;
+}
+
+.education-section-item{
+    height: 100vh;
+    padding: 1rem;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
