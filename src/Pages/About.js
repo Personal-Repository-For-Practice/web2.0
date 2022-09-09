@@ -1,6 +1,10 @@
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import '../Styles/ProgrammingAnimation.css'
+import Skill_ProgrammingLanguages from '../Components/Skill_ProgrammingLanguages'
+import Skill_Other from '../Components/Skill_Other'
+import Skill_Technical from '../Components/Skill_Technical'
+import Skill_Software from '../Components/Skill_Software'
 
 export default function About() {
     return (
@@ -56,18 +60,18 @@ export default function About() {
                         <path d="M224.767 34.3636L217.54 36.4091C217.085 35.2045 216.415 34.0341 215.528 32.8977C214.665 31.7386 213.483 30.7841 211.983 30.0341C210.483 29.2841 208.563 28.9091 206.222 28.9091C203.017 28.9091 200.347 29.6477 198.21 31.125C196.097 32.5795 195.04 34.4318 195.04 36.6818C195.04 38.6818 195.767 40.2614 197.222 41.4205C198.676 42.5795 200.949 43.5455 204.04 44.3182L211.813 46.2273C216.494 47.3636 219.983 49.1023 222.278 51.4432C224.574 53.7614 225.722 56.75 225.722 60.4091C225.722 63.4091 224.858 66.0909 223.131 68.4545C221.426 70.8182 219.04 72.6818 215.972 74.0455C212.903 75.4091 209.335 76.0909 205.267 76.0909C199.926 76.0909 195.506 74.9318 192.006 72.6136C188.506 70.2955 186.29 66.9091 185.358 62.4545L192.994 60.5455C193.722 63.3636 195.097 65.4773 197.119 66.8864C199.165 68.2955 201.835 69 205.131 69C208.881 69 211.858 68.2045 214.063 66.6136C216.29 65 217.403 63.0682 217.403 60.8182C217.403 59 216.767 57.4773 215.494 56.25C214.222 55 212.267 54.0682 209.631 53.4545L200.903 51.4091C196.108 50.2727 192.585 48.5114 190.335 46.125C188.108 43.7159 186.994 40.7045 186.994 37.0909C186.994 34.1364 187.824 31.5227 189.483 29.25C191.165 26.9773 193.449 25.1932 196.335 23.8977C199.244 22.6023 202.54 21.9545 206.222 21.9545C211.403 21.9545 215.472 23.0909 218.426 25.3636C221.403 27.6364 223.517 30.6364 224.767 34.3636Z" stroke="#0055A3" stroke-width="6" mask="url(#path-1-outside-1_12_7)"/>
                     </svg>
 
-                    <div className='skill-content'>
-                        <div className='skill-grid'>
-                            <text className='Header'>Programming Languages</text>
-                            <ul className='listing'>
-                                <li className='listStyling'>Python</li>
-                                <li className='listStyling'>Java</li>
-                                <li className='listStyling'>C#</li>
-                                <li className='listStyling'>HTML & CSS</li>
-                                <li className='listStyling'>Java Script</li>
-                                <li className='listStyling'>React</li>
-                                <li className='listStyling'>PHP</li>
-                            </ul>
+                    <div className='skill-section'>
+                        <div className='skill-section-item'>
+                            <Skill_ProgrammingLanguages/>
+                        </div>
+                        <div className='skill-section-item'>
+                            <Skill_Technical/>
+                        </div>
+                        <div className='skill-section-item'>
+                            <Skill_Other/>
+                        </div>
+                        <div className='skill-section-item'>
+                            <Skill_Software/>
                         </div>
                     </div>
                 </div>
