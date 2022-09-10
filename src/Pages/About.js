@@ -5,6 +5,8 @@ import Skill_ProgrammingLanguages from '../Components/Skill_ProgrammingLanguages
 import Skill_Other from '../Components/Skill_Other'
 import Skill_Technical from '../Components/Skill_Technical'
 import Skill_Software from '../Components/Skill_Software'
+import Education_University from '../Components/Education_University'
+import Education_GCSE_ALevel from '../Components/Education_GCSE_ALevel'
 
 export default function About() {
     return (
@@ -103,8 +105,12 @@ export default function About() {
                     </svg>
 
                     <div className='education-section'>
-                        <div className='education-section-item'>Image</div>
-                        <div className='education-section-item'>Image</div>
+                        <div className='education-section-item'>
+                            <Education_University/>
+                        </div>
+                        <div className='education-section-item'>
+                            <Education_GCSE_ALevel/>
+                        </div>
                     </div>
 
                 </div>
