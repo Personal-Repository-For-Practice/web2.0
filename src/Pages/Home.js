@@ -70,7 +70,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="subtitle">Scroll Box To Discover</div>
+                        <div className="subtitle">Scroll To Discover</div>
                     </div>
                 </div>
             </div>

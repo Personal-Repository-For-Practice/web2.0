@@ -476,3 +476,24 @@ a{
     border-radius: 50%;
 }
 
+.employment-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 10vw;
+    gap: 5rem;
+    background-color: #115179;
+}
+
+#employmentTitle{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+
+    fill: transparent;
+
+    animation: draw 3s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
