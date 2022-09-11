@@ -482,9 +482,9 @@ a{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    padding: 10vw;
+    padding: 1rem;
+    padding-left: 4rem;
     gap: 5rem;
-    background-color: #115179;
 }
 
 #employmentTitle{
@@ -496,4 +496,62 @@ a{
     animation: draw 3s ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+.employment-section{
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    background-color: #555;
+}
+
+.employment-section::-webkit-scrollbar{
+    display: none;
+}
+
+.employment-section-item{
+    height: 100vh;
+    padding: 3rem;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.employment-header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    padding: 1rem;
+    gap: 5rem;
+}
+
+.employment-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    padding: 1rem;
+}
+
+.employment-logo{
+    width: auto;
+    height: auto;
+}
+
+.funtech-logo{
+    width: 6vw;
+    height: 6vw;
+}
+
+.CResearch-logo{
+    width: 8vw;
+    height: 7vw;
 }
