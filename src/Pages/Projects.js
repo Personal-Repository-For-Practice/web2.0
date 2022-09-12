@@ -1,15 +1,18 @@
+import { height } from "@mui/system";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+
+var stateCounter = 0;
+var stringOfValues = "";
 
 export default function Projects() {
     return(
         <>
         <Navbar/>
-        <div className='section'>
-            <div className='section-item'>
+        <div className='projects-section'>
+            <div className='projects-section-item'>
                 <div className='grid'>
                     <div className='about-me-title'>
-
                         <svg width="362" height="98" viewBox="0 0 362 98" fill="none" xmlns="http://www.w3.org/2000/svg" id="projectsTitle">
                             <mask id="path-1-outside-1_11_6" maskUnits="userSpaceOnUse" x="0.0952148" y="0" width="362" height="98" fill="black">
                             <rect fill="white" x="0.0952148" width="362" height="98"/>
@@ -31,25 +34,95 @@ export default function Projects() {
                             <path d="M309.402 22.6364V29.4545H282.266V22.6364H309.402ZM290.175 10.0909H298.22V60C298.22 62.2727 298.55 63.9773 299.209 65.1136C299.891 66.2273 300.754 66.9773 301.8 67.3636C302.868 67.7273 303.993 67.9091 305.175 67.9091C306.061 67.9091 306.788 67.8636 307.357 67.7727C307.925 67.6591 308.379 67.5682 308.72 67.5L310.357 74.7273C309.811 74.9318 309.05 75.1364 308.072 75.3409C307.095 75.5682 305.857 75.6818 304.357 75.6818C302.084 75.6818 299.857 75.1932 297.675 74.2159C295.516 73.2386 293.72 71.75 292.288 69.75C290.879 67.75 290.175 65.2273 290.175 62.1818V10.0909Z" stroke="#BBBBBB" stroke-width="6" mask="url(#path-1-outside-1_11_6)"/>
                             <path d="M357.658 34.3636L350.43 36.4091C349.976 35.2045 349.305 34.0341 348.419 32.8977C347.555 31.7386 346.374 30.7841 344.874 30.0341C343.374 29.2841 341.453 28.9091 339.112 28.9091C335.908 28.9091 333.237 29.6477 331.101 31.125C328.987 32.5795 327.93 34.4318 327.93 36.6818C327.93 38.6818 328.658 40.2614 330.112 41.4205C331.567 42.5795 333.84 43.5455 336.93 44.3182L344.703 46.2273C349.385 47.3636 352.874 49.1023 355.169 51.4432C357.464 53.7614 358.612 56.75 358.612 60.4091C358.612 63.4091 357.749 66.0909 356.021 68.4545C354.317 70.8182 351.93 72.6818 348.862 74.0455C345.794 75.4091 342.226 76.0909 338.158 76.0909C332.817 76.0909 328.396 74.9318 324.896 72.6136C321.396 70.2955 319.18 66.9091 318.249 62.4545L325.885 60.5455C326.612 63.3636 327.987 65.4773 330.01 66.8864C332.055 68.2955 334.726 69 338.021 69C341.771 69 344.749 68.2045 346.953 66.6136C349.18 65 350.294 63.0682 350.294 60.8182C350.294 59 349.658 57.4773 348.385 56.25C347.112 55 345.158 54.0682 342.521 53.4545L333.794 51.4091C328.999 50.2727 325.476 48.5114 323.226 46.125C320.999 43.7159 319.885 40.7045 319.885 37.0909C319.885 34.1364 320.715 31.5227 322.374 29.25C324.055 26.9773 326.339 25.1932 329.226 23.8977C332.135 22.6023 335.43 21.9545 339.112 21.9545C344.294 21.9545 348.362 23.0909 351.317 25.3636C354.294 27.6364 356.408 30.6364 357.658 34.3636Z" stroke="#BBBBBB" stroke-width="6" mask="url(#path-1-outside-1_11_6)"/>
                         </svg>
-
-
                     </div>
                     <div className='center'>
                         <div className="subtitle">Scroll Down To Discover</div>
                     </div>
                 </div>
             </div>
-            <div className='section-item'>
+
+            <div className='projects-section-item'>
+                <div className="calc-wrapper">
+                    <a onClick={() => expandCalc()}>
+                        <div className="calc-button" id="calc-expand">
+
+                        </div>
+                    </a>
+                    <div className="calc-body" id='calcBody'>
+                        <div className="calc-screen" id="calcScreen">
+                            hello
+                        </div>
+                        <div className="calc-buttons" id="calcNumBtns">
+                            <button className="calc-action-number" onClick={() => getValues("1")}>1</button>
+                            <button className="calc-action-number" onClick={() => getValues("2")}>2</button>
+                            <button className="calc-action-number" onClick={() => getValues("3")}>3</button>
+                            <button className="calc-action-number" onClick={() => getValues("4")}>4</button>
+                            <button className="calc-action-number" onClick={() => getValues("5")}>5</button>
+                            <button className="calc-action-number" onClick={() => getValues("6")}>6</button>
+                            <button className="calc-action-number" onClick={() => getValues("7")}>7</button>
+                            <button className="calc-action-number" onClick={() => getValues("8")}>8</button>
+                            <button className="calc-action-number" onClick={() => getValues("9")}>9</button>
+                            <button className="calc-action-number" onClick={() => getValues("0")}>0</button>
+                        </div>
+                        <div className="calc-specialBtns">
+                            <button className="calc-action-special" onClick={() => getValues("+")}>+</button>
+                            <button className="calc-action-special" onClick={() => getValues("-")}>-</button>
+                            <button className="calc-action-special" onClick={() => getValues("/")}>/</button>
+                            <button className="calc-action-special" onClick={() => getValues("x")}>x</button>
+                            <button className="calc-action-calculate" onClick={() => getValues("=")}>=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='projects-section-item'>
                 hello
             </div>
-            <div className='section-item'>
-                hello
-            </div>
-            <div className='section-item'>
+            <div className='projects-section-item'>
                 hello
             </div>
         </div>
-        <Footer/>
         </>
     )
+}
+
+function expandCalc(){
+    {
+        if (stateCounter === 0){
+            document.getElementById("calc-expand").style.transition = "0.5s";
+            document.getElementById("calc-expand").style.marginTop = "0vh";
+            document.getElementById("calc-expand").style.backgroundColor = "rgb(151, 37, 37)";
+
+            document.getElementById("calcBody").style.transition = "0.5s";
+            document.getElementById("calcBody").style.width = "40vw";
+            document.getElementById("calcBody").style.height = "72vh";
+
+            document.getElementById("calcNumBtns").style.opacity = "1";
+            document.getElementById("calcScreen").style.opacity = "1";
+            document.getElementById("calcBody").style.opacity = "1";
+
+            stateCounter = 1;
+        } else if (stateCounter === 1){
+            document.getElementById("calc-expand").style.transition = "0.5s";
+            document.getElementById("calc-expand").style.marginTop = "90vh";
+            document.getElementById("calc-expand").style.backgroundColor = "#227C98";
+
+            document.getElementById("calcBody").style.width = "0vw";
+            document.getElementById("calcBody").style.height = "0vh";
+
+            document.getElementById("calcNumBtns").style.opacity = "0";
+            document.getElementById("calcScreen").style.opacity = "0";
+            document.getElementById("calcBody").style.opacity = "0";
+
+            stateCounter = 0;
+        }
+    }
+}
+
+function getValues(val){
+    stringOfValues += val;
+    alert(stringOfValues);
+}
+
+function splitString(){
+
 }
